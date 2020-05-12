@@ -3,6 +3,7 @@ import {Component, OnInit, Input} from '@angular/core';
 import * as _ from 'lodash';
 
 import {DataService} from '../data.service';
+import {Config} from '../../model/config/config.model';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -12,7 +13,7 @@ export class TableComponent implements OnInit {
 
   data = [];
   // Dichiarazione dei campi header della tabella Users
-  @Input() headers;
+  @Input() config: Config;
   dataSearch = [];
   constructor(
     private dataService: DataService

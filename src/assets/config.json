@@ -1,0 +1,30 @@
+{
+  "config": {
+    "headers":
+      [{"key": "nome", "value": "Nome"},
+        {"key": "cognome", "value": "Cognome"},
+        {"key": "citta", "value": "Città"},
+        {"key": "username", "value": "Username"}],
+    "operations": {
+      "search": {
+        "active": "visible",
+        "filter": [
+          "nome",
+          "cognome"
+        ]
+      },
+      "sort": {
+        "active": "true",
+        "fields": [
+          "nome",
+          "cognome",
+          "citta"
+        ]
+      },
+      "pagination": {
+        "rows": 5,
+        "rowsForPage": 5
+      }
+    }
+  }
+}

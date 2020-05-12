@@ -1,4 +1,4 @@
-import {Users} from './users.model';
+import {Users} from '../model/user/users.model';
 import {EventEmitter} from '@angular/core';
 
 export class DataService{
