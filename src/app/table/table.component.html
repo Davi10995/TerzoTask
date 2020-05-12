@@ -1,1 +1,19 @@
-<p>table works!</p>
+<table align="center" border="1" cellpadding="5">
+<!--  Stampa header -->
+  <label>Ricerca <input #ricerca size="30" name="keyword" (keyup)="search(filter.value, ricerca.value)"/></label>
+  <select #filter>
+    <option value="nome">Nome</option>
+    <option value="cognome">Cognome</option>
+  </select>
+  <button (click)="search(filter.value, ricerca.value)"></button>
+
+  <tr>
+    <th *ngFor="let header of headers">
+    {{header.value}}</th>
+  </tr>
+<!--  Stampa data tramite array ricevto in input-->
+  <tr *ngFor="let d of dataSearch">
+    <td *ngFor="let header of headers">
+      {{d[header.key]}}</td>
+  </tr>
+</table>

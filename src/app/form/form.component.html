@@ -1,1 +1,15 @@
-<p>form works!</p>
+<table>
+  <tr>
+    <td>Nome<input type="text" #nome class="form-control"></td>
+  </tr>
+  <tr>
+    <td>Cognome<input type="text"#cognome class="form-control"></td>
+  </tr>
+  <tr>
+    <td>Città<input type="text" #citta class="form-control"></td>
+  </tr>
+  <tr>
+    <td>Username<input type="text" #username class="form-control"></td>
+  </tr>
+  <button style="margin-top: 10px"  type="button" (click)="userProperties(nome.value, cognome.value, citta.value, username.value)">Salva</button>
+</table>

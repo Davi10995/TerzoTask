@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'lodash-project'`, () => {
+  it(`should have as title 'primoTask'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('lodash-project');
+    expect(app.title).toEqual('primoTask');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('lodash-project app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('primoTask app is running!');
   });
 });
