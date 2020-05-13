@@ -1,7 +1,9 @@
 export class Search{
-  constructor(
-    public active: boolean,
-    public filter: [string]
-  ) {
-  }
+    public active: boolean;
+    public filter: [string];
+
+    constructor(active, filter) {
+      this.active = active;
+      this.filter = filter;
+    }
 }

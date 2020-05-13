@@ -1,7 +1,9 @@
 export class Pagination{
-  constructor(
-    public rows: number,
-    public rowsForPage: number
-  ) {
-  }
+    public rows: number;
+    public rowsForPage: [number];
+
+    constructor(rows, rowsForPage) {
+      this.rows = rows;
+      this.rowsForPage = rowsForPage;
+    }
 }

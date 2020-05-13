@@ -1,8 +1,9 @@
 
 export class Header{
-  constructor(
-    public headers: []
-  ) {
+    key: string;
+  value: string;
+  constructor(key, value) {
+    this.key = key;
+    this.value = value;
   }
-
 }

@@ -1,17 +1,22 @@
-<table align="center" border="1" cellpadding="5">
-<!--  Stampa header -->
-  <div class="{{config.operations.search.active}}">
-  <label>Ricerca <input #ricerca size="30" name="keyword" (keyup)="search(filter.value, ricerca.value)"/></label>
-  <select #filter>
+
+<div style="margin-bottom: 20px" class="{{config.operations.search.active.toString()}}">
+  <label  >Ricerca <input #ricerca size="30" name="keyword" /></label>  <!-- -> (keyup)="search(filter.value, ricerca.value)" -->
+  <select style="margin-left: 15px" #filter>
     <option value="nome">Nome</option>
     <option value="cognome">Cognome</option>
   </select>
-  </div>
-  <button (click)="search(filter.value, ricerca.value)"></button>
+  <button type="button" style="margin-left: 10px" (click)="search(filter.value, ricerca.value)">Cerca</button>
+</div>
 
+<input type="button" (click)="sort('nome')" value="nome">
+<table align="center" border="1" cellpadding="5" style="width: 50%" >
+<!--  Stampa header -->
   <tr>
     <th *ngFor="let header of config.header">
-    {{header.value}}</th>
+<!--   Ordina in base alla colonna dell'header   -->
+      <input type="button" (click)="sort(header.key)" value="{{header.value}}">
+    </th>
+
   </tr>
 <!--  Stampa data tramite array ricevto in input-->
   <tr *ngFor="let d of dataSearch">
@@ -19,3 +24,4 @@
       {{d[header.key]}}</td>
   </tr>
 </table>
+

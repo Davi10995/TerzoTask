@@ -7,7 +7,7 @@
         {"key": "username", "value": "Username"}],
     "operations": {
       "search": {
-        "active": "visible",
+        "active": "true",
         "filter": [
           "nome",
           "cognome"

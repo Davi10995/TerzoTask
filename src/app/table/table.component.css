@@ -1,6 +1,11 @@
-.visible{
-  position: absolute;
-  top: 120px;
-  left: 250px;
-  z-index: 1;
-}
+
+ td{
+   width: 25%;
+ }
+ th{
+   width: 25%;
+ }
+
+ .false{
+   visibility: hidden;
+ }

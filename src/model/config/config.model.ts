@@ -3,7 +3,7 @@ import {Operations} from './operations/operations.model';
 
 export class Config{
   constructor(
-    public header: Header,
+    public header: Header[],
     public operations: Operations
   ) {
   }
