@@ -7,6 +7,7 @@ import { FormComponent } from './form/form.component';
 import { TableComponent } from './table/table.component';
 import { HttpClientModule} from '@angular/common/http';
 import {CallService} from './call.service';
+import {DataService} from './data.service';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,10 @@ import {CallService} from './call.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [CallService],
+  providers: [CallService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
